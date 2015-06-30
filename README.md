@@ -2,7 +2,7 @@
 
 ## CSS Styles and Components for [Electron](http://electron.atom.io)
 
-Inspired by Twitter Bootstrap, Proton is a living breathing mixture of sass components to get you up and running with solid HTML/CSS. 
+Inspired by Twitter Bootstrap, Proton is a living breathing mixture of sass components to get you up and running with solid HTML/CSS.
 
 ### Get Started
 
@@ -17,3 +17,10 @@ Inspired by Twitter Bootstrap, Proton is a living breathing mixture of sass comp
 `gulp serve` - This will run an auto-refresh browser session that watches changes to files.
 
 `gulp sass` - Sass watching command to compile any changes to scss files.
+
+
+### Reference
+
+##### Github's Octicons
+
+See [Octicons](https://octicons.github.com/) for reference and usage.

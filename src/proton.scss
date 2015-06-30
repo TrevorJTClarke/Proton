@@ -16,6 +16,13 @@
   "styles/_mixins"
   ;
 
-
 // Icons
-@import "styles/_ghicons";
+@import
+  "styles/_ghicons",
+  "styles/_ghcodes"
+  ;
+
+// Core Components
+@import
+  "styles/_notifications"
+  ;
