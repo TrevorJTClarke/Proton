@@ -13,16 +13,25 @@
 // Core variables and mixins
 @import
   "styles/_variables",
-  "styles/_mixins"
+  "styles/_ghcodes",
+  "styles/_mixins",
+  "styles/_ghmixins"
   ;
 
 // Icons
 @import
-  "styles/_ghicons",
-  "styles/_ghcodes"
+  "styles/_ghicons"
   ;
 
 // Core Components
 @import
-  "styles/_notifications"
+  "styles/_notifications",
+  "styles/_buttons",
+  "styles/_badges",
+  "styles/_icons",
+  "styles/_links",
+  "styles/_lists",
+  "styles/_messages",
+  "styles/_panels",
+  "styles/_panes"
   ;

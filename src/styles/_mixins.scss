@@ -22,3 +22,41 @@
   @include font-family-sans-serif();
   @include font-shorthand($size, $weight, $line-height);
 }
+
+// Pattern matching; ish is cray.
+// http://lesscss.org/#-pattern-matching-and-guard-expressions
+/* TODO: migrate to have this work, similar to LESS
+@mixin text(normal) {
+  font-weight: normal;
+  color: $text-color;
+}
+@mixin text(subtle) {
+  font-weight: normal;
+  color: $text-color-subtle;
+}
+@mixin text(highlight) {
+  font-weight: normal;
+  color: $text-color-highlight;
+}
+@mixin text(selected) {
+  @include text(highlight)
+}
+
+@mixin text(info) {
+  color: $text-color-info;
+}
+@mixin text(success) {
+  color: $text-color-success;
+}
+@mixin text(warning) {
+  color: $text-color-warning;
+}
+@mixin text(error) {
+  color: $text-color-error;
+} */
+
+@mixin focus() {
+  outline: none;
+  border-color: $base-accent-color;
+  box-shadow: 0 0 0 1px $base-accent-color;
+}

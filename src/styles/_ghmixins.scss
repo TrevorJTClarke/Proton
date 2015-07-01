@@ -1,0 +1,50 @@
+// Octicons Mixins
+// --------------------------------------------------
+@mixin icon-size($size) {
+  font-size: $size;
+  width: $size;
+  height: $size;
+}
+
+@mixin icon($size, $display: inline-block) {
+  font-family: 'Octicons Regular';
+  font-weight: normal;
+  font-style: normal;
+  display: $display;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+
+  @include icon-size($size);
+}
+
+@mixin octicon($name, $size: 16px) {
+  &::before {
+    @include icon($size);
+    content: $name;
+  }
+}
+
+@mixin octicon-content($name) {
+  &::before {
+    content: $name;
+  }
+}
+
+@mixin mega-octicon($name, $size: 32px) {
+  &::before {
+    @include icon($size);
+    content: $name;
+  }
+}
+
+@mixin octicon-font() {
+  font-family: 'Octicons Regular';
+  src: url("octicons.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin make-icon($name,$icon) {
+  .icon-#{$name} { @include octicon-content($icon); }
+}
