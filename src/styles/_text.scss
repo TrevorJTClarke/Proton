@@ -1,0 +1,31 @@
+@mixin text-bits ($text-color,$bg-color) {
+  code {
+    color: $text-color;
+    background: desaturate($bg-color, 80%);
+  }
+
+  a, a code {
+    text-decoration: underline;
+    color: darken($text-color, 10%);
+
+    &:hover {
+      color: darken($text-color, 15%);
+    }
+  }
+}
+
+.text-info {
+  @include text-bits($text-color-info,$background-color-info);
+}
+
+.text-success {
+  @include text-bits($text-color-success,$background-color-success);
+}
+
+.text-warning {
+  @include text-bits($text-color-warning,$background-color-warning);
+}
+
+.text-error {
+  @include text-bits($text-color-error,$background-color-error);
+}

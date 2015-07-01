@@ -15,23 +15,31 @@
   "styles/_variables",
   "styles/_ghcodes",
   "styles/_mixins",
-  "styles/_ghmixins"
-  ;
-
-// Icons
-@import
+  "styles/_ghmixins",
   "styles/_ghicons"
   ;
 
 // Core Components
 @import
+  "styles/_workspace-view",
+  "styles/_bootstrap-overrides",
   "styles/_notifications",
   "styles/_buttons",
   "styles/_badges",
   "styles/_icons",
   "styles/_links",
   "styles/_lists",
+  "styles/_linux",
+  "styles/_markdown",
   "styles/_messages",
   "styles/_panels",
-  "styles/_panes"
+  "styles/_panes",
+  "styles/_popover-list",
+  "styles/_sections",
+  "styles/_select-list",
+  "styles/_syntax",
+  "styles/_text-editor-light",
+  "styles/_text-editor-shadow",
+  "styles/_text",
+  "styles/_utilities"
   ;

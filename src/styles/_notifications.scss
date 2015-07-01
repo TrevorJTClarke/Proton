@@ -227,13 +227,13 @@ atom-notification {
   }
 
   .close-all.btn {
-    border: 1px solid fadeout(darken($txt, 40%), 70%);
-    color: fadeout(darken($txt, 40%), 40%);
+    border: 1px solid desaturate(darken($txt, 40%), 70%);
+    color: desaturate(darken($txt, 40%), 40%);
     text-shadow: none;
 
     &:hover {
       background: none;
-      border-color: fadeout(darken($txt, 40%), 20%);
+      border-color: desaturate(darken($txt, 40%), 20%);
       color: darken($txt, 40%);
     }
   }
