@@ -10,6 +10,12 @@
  * Copyright: 2015
  * License: MIT
  */
+/**
+ * --------------------------------
+ * One Dark UI Port
+ * --------------------------------
+ * TODO: proof the mixins here, the port is a little mixed up
+ */
 @font-face {
   font-family: 'octicon';
   src: url("./fonts/octicons.eot?#iefix") format("embedded-opentype"), url("./fonts/octicons.woff") format("woff"), url("./fonts/octicons.ttf") format("truetype"), url("./fonts/octicons.svg") format("svg");
@@ -644,6 +650,9 @@
 .icon-zap::before {
   content: "⚡"; }
 
+* {
+  box-sizing: border-box; }
+
 html {
   font-family: "Lucida Grande", "Segoe UI", Ubuntu, Cantarell, sans-serif;
   font-size: 13px; }
@@ -668,6 +677,54 @@ atom-workspace {
     display: -webkit-flex;
     -webkit-flex: 1;
     -webkit-flex-flow: column; }
+  atom-workspace atom-panel-container.left:empty {
+    padding-left: 0.5em; }
+
+.platform-darwin atom-workspace.theme-one-light-ui {
+  border-top: 1px solid #bbbbbb; }
+
+.platform-darwin.is-blurred atom-workspace.theme-one-light-ui {
+  border-top-color: #eee; }
+
+.scrollbars-visible-always /deep/ ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px; }
+
+.scrollbars-visible-always /deep/ ::-webkit-scrollbar-track {
+  background: #f7f7f7; }
+
+.scrollbars-visible-always /deep/ ::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  border: 3px solid #f7f7f7;
+  background: white;
+  background-clip: content-box; }
+
+.scrollbars-visible-always /deep/ ::-webkit-scrollbar-corner {
+  background: #f7f7f7; }
+
+.scrollbars-visible-always /deep/ ::-webkit-scrollbar-thumb:vertical:active {
+  border-radius: 0;
+  border-left-width: 0;
+  border-right-width: 0; }
+
+.scrollbars-visible-always /deep/ ::-webkit-scrollbar-thumb:horizontal:active {
+  border-radius: 0;
+  border-top-width: 0;
+  border-bottom-width: 0; }
+
+.scrollbars-visible-always atom-text-editor /deep/ ::-webkit-scrollbar-track {
+  background: #fff; }
+
+.scrollbars-visible-always atom-text-editor /deep/ ::-webkit-scrollbar-corner {
+  background: #fff; }
+
+.scrollbars-visible-always atom-text-editor /deep/ ::-webkit-scrollbar-thumb {
+  border-color: #fff;
+  background: contrast(#fff, #d1d1d1, white); }
+
+.caret {
+  border-top: 5px solid #fff;
+  margin-top: -1px; }
 
 .nav > li > a {
   border-radius: 2px; }
@@ -1032,25 +1089,198 @@ atom-notifications {
     z-index: 1;
     background-color: #d9d9d9; }
 
+.btn {
+  height: initial;
+  padding: 0 0.8em;
+  font-size: 1em;
+  line-height: 2em; }
+
+.btn,
+.btn.btn-default {
+  color: #333;
+  text-shadow: none;
+  border: 1px solid #aaa;
+  background-color: #ccc;
+  background-image: linear-gradient(#d1d1d1, #ccc); }
+  .btn:focus,
+  .btn.btn-default:focus {
+    outline: none; }
+  .btn:focus,
+  .btn:hover,
+  .btn.btn-default:focus,
+  .btn.btn-default:hover {
+    color: #111;
+    background-image: linear-gradient(#dedede, #d9d9d9); }
+  .btn:active,
+  .btn.btn-default:active {
+    background: #c2c2c2;
+    box-shadow: none; }
+  .btn.selected,
+  .btn.btn-default.selected {
+    background: #d9d9d9; }
+  .btn.selected:focus,
+  .btn.selected:hover,
+  .btn.btn-default.selected:focus,
+  .btn.btn-default.selected:hover {
+    background: #dedede; }
+
+.btn.btn-primary {
+  color: #111;
+  text-shadow: none;
+  border: 1px solid #aaa;
+  background-color: #528bff;
+  background-image: linear-gradient(#5c92ff, #528bff);
+  color: contrast(#528bff, #404040, white, 70%);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+  .btn.btn-primary:focus {
+    outline: none; }
+  .btn.btn-primary:focus,
+  .btn.btn-primary:hover {
+    color: #111;
+    background-image: linear-gradient(#6b9cff, #6196ff); }
+  .btn.btn-primary:active {
+    background: #3d7eff;
+    box-shadow: none; }
+  .btn.btn-primary.selected {
+    background: #1463ff; }
+  .btn.btn-primary.selected:focus,
+  .btn.btn-primary.selected:hover {
+    background: #1f69ff; }
+  .btn.btn-primary:hover,
+  .btn.btn-primary:focus {
+    color: contrast(#528bff, #404040, white, 70%); }
+  .btn.btn-primary.icon:before {
+    color: contrast(#528bff, #404040, white, 70%); }
+
+.btn.btn-info {
+  color: #111;
+  text-shadow: none;
+  border: 1px solid #aaa;
+  background-color: #0098ff;
+  background-image: linear-gradient(#0a9cff, #0098ff);
+  color: contrast(#0098ff, #404040, white, 70%);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+  .btn.btn-info:focus {
+    outline: none; }
+  .btn.btn-info:focus,
+  .btn.btn-info:hover {
+    color: #111;
+    background-image: linear-gradient(#1aa2ff, #0f9eff); }
+  .btn.btn-info:active {
+    background: #008ceb;
+    box-shadow: none; }
+  .btn.btn-info.selected {
+    background: #0074c2; }
+  .btn.btn-info.selected:focus,
+  .btn.btn-info.selected:hover {
+    background: #007acc; }
+  .btn.btn-info:hover,
+  .btn.btn-info:focus {
+    color: contrast(#0098ff, #404040, white, 70%); }
+  .btn.btn-info.icon:before {
+    color: contrast(#0098ff, #404040, white, 70%); }
+
+.btn.btn-success {
+  color: #111;
+  text-shadow: none;
+  border: 1px solid #aaa;
+  background-color: #17ca65;
+  background-image: linear-gradient(#18d36a, #17ca65);
+  color: contrast(#17ca65, #404040, white, 70%);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+  .btn.btn-success:focus {
+    outline: none; }
+  .btn.btn-success:focus,
+  .btn.btn-success:hover {
+    color: #111;
+    background-image: linear-gradient(#1ae170, #19d86c); }
+  .btn.btn-success:active {
+    background: #15b85c;
+    box-shadow: none; }
+  .btn.btn-success.selected {
+    background: #00a347; }
+  .btn.btn-success.selected:focus,
+  .btn.btn-success.selected:hover {
+    background: #00ae4c; }
+  .btn.btn-success:hover,
+  .btn.btn-success:focus {
+    color: contrast(#17ca65, #404040, white, 70%); }
+  .btn.btn-success.icon:before {
+    color: contrast(#17ca65, #404040, white, 70%); }
+
+.btn.btn-warning {
+  color: #111;
+  text-shadow: none;
+  border: 1px solid #aaa;
+  background-color: #ff4800;
+  background-image: linear-gradient(#ff4f0a, #ff4800);
+  color: contrast(#ff4800, #404040, white, 70%);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+  .btn.btn-warning:focus {
+    outline: none; }
+  .btn.btn-warning:focus,
+  .btn.btn-warning:hover {
+    color: #111;
+    background-image: linear-gradient(#ff5a1a, #ff530f); }
+  .btn.btn-warning:active {
+    background: #eb4200;
+    box-shadow: none; }
+  .btn.btn-warning.selected {
+    background: #c23700; }
+  .btn.btn-warning.selected:focus,
+  .btn.btn-warning.selected:hover {
+    background: #cc3a00; }
+  .btn.btn-warning:hover,
+  .btn.btn-warning:focus {
+    color: contrast(#ff4800, #404040, white, 70%); }
+  .btn.btn-warning.icon:before {
+    color: contrast(#ff4800, #404040, white, 70%); }
+
+.btn.btn-error {
+  color: #111;
+  text-shadow: none;
+  border: 1px solid #aaa;
+  background-color: #c00;
+  background-image: linear-gradient(#d60000, #c00);
+  color: contrast(#c00, #404040, white, 70%);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+  .btn.btn-error:focus {
+    outline: none; }
+  .btn.btn-error:focus,
+  .btn.btn-error:hover {
+    color: #111;
+    background-image: linear-gradient(#e60000, #db0000); }
+  .btn.btn-error:active {
+    background: #b80000;
+    box-shadow: none; }
+  .btn.btn-error.selected {
+    background: #8f0000; }
+  .btn.btn-error.selected:focus,
+  .btn.btn-error.selected:hover {
+    background: #990000; }
+  .btn.btn-error:hover,
+  .btn.btn-error:focus {
+    color: contrast(#c00, #404040, white, 70%); }
+  .btn.btn-error.icon:before {
+    color: contrast(#c00, #404040, white, 70%); }
+
 .btn.btn-xs,
 .btn-group-xs > .btn {
-  padding: 2.5px 5px;
-  font-size: 11px;
-  height: auto;
-  line-height: 1.3em; }
+  font-size: 0.8em;
+  line-height: 2em;
+  padding: 0 0.8em; }
 
 .btn.btn-sm,
 .btn-group-sm > .btn {
-  padding: 2.5px 5px;
-  height: auto;
-  line-height: 1.3em; }
+  font-size: 0.9em;
+  line-height: 2em;
+  padding: 0 0.8em; }
 
 .btn.btn-lg,
 .btn-group-lg > .btn {
-  font-size: 15px;
-  padding: 8px 12px;
-  height: auto;
-  line-height: 1.3em; }
+  font-size: 1.5em;
+  line-height: 2em;
+  padding: 0 0.8em; }
 
 .btn-group > .btn {
   border-left: 1px solid #aaa;
@@ -1067,6 +1297,24 @@ atom-notifications {
   border-right: none;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px; }
+
+.btn-group > .btn {
+  z-index: 0; }
+  .btn-group > .btn:hover {
+    z-index: 0; }
+  .btn-group > .btn:first-child {
+    border-left: 1px solid #aaa; }
+  .btn-group > .btn:last-child {
+    border-right: 1px solid #aaa; }
+  .btn-group > .btn.btn:focus {
+    z-index: 1; }
+  .btn-group > .btn.selected,
+  .btn-group > .btn.selected:first-child,
+  .btn-group > .btn.selected:last-child {
+    color: contrast(#d9d9d9, white, #001133, 40%);
+    border: 1px solid #eee; }
+  .btn-group > .btn.selected + .btn {
+    border-left-color: #eee; }
 
 .btn-toolbar > .btn-group + .btn-group, .btn-toolbar > .btn-group + .btn, .btn-toolbar > .btn + .btn {
   float: none;
@@ -1086,7 +1334,10 @@ atom-notifications {
   font-weight: normal;
   text-align: center;
   white-space: nowrap;
-  border-radius: 1em;
+  padding: 0.375em 0.6em;
+  min-width: 1.875em;
+  border-radius: 2em;
+  background-color: rgba(255, 255, 255, 0.1);
   color: #111;
   background-color: rgba(255, 255, 255, 0.1);
   font-size: 13px;
@@ -1123,8 +1374,8 @@ atom-notifications {
     min-width: 1.6em;
     padding: 0.4em 0.6em; }
   .badge.icon {
-    font-size: 13px;
-    padding: 5px 10px; }
+    font-size: 1em;
+    padding: 0.45455em 0.68182em; }
 
 .icon::before {
   margin-right: 5px; }
@@ -1700,6 +1951,40 @@ atom-text-editor {
     overflow: auto;
     bottom: 0;
     right: 0; }
+
+atom-text-editor[mini] {
+  line-height: 25px;
+  max-height: 27px;
+  overflow: auto; }
+
+atom-text-editor[mini] {
+  font-size: 1.15em;
+  line-height: 2em;
+  max-height: none;
+  padding-left: 0.5em;
+  border-radius: 2px;
+  color: #111;
+  border: 1px solid #eee;
+  background-color: #fff; }
+  atom-text-editor[mini] .placeholder-text,
+  atom-text-editor[mini]::shadow .placeholder-text {
+    color: #777; }
+  atom-text-editor[mini] .selection .region,
+  atom-text-editor[mini]::shadow .selection .region {
+    background-color: rgba(240, 240, 240, 0.1); }
+  atom-text-editor[mini] .cursor,
+  atom-text-editor[mini]::shadow .cursor {
+    border-color: #528bff;
+    border-width: 2px; }
+  atom-text-editor[mini].is-focused,
+  atom-text-editor[mini].is-focused::shadow {
+    outline: none;
+    border-color: #528bff;
+    box-shadow: 0 0 0 1px #528bff;
+    background-color: fadein(#fff, 6%); }
+    atom-text-editor[mini].is-focused .selection .region,
+    atom-text-editor[mini].is-focused::shadow .selection .region {
+      background-color: rgba(255, 255, 255, 0.1); }
 
 .editor--private,
 .editor-contents--private {
