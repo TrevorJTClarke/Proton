@@ -25,6 +25,10 @@ atom-workspace {
   atom-workspace-axis.horizontal {
     display: -webkit-flex;
     height: 100%;
+
+    atom-pane-resize-handle.vertical {
+      position: absolute;
+    }
   }
 
   atom-workspace-axis.vertical {

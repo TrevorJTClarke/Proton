@@ -29,3 +29,86 @@
 .text-error {
   @include text-bits($text-color-error,$background-color-error);
 }
+
+h1,
+h2,
+h3 {
+  line-height: 1em;
+  margin-bottom: 15px
+}
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.2em; }
+
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: normal;
+}
+
+pre {
+  box-shadow: none;
+  color: $text-color;
+  background: $inset-panel-background-color;
+  border-radius: $component-border-radius;
+  border: none;
+  margin: 0;
+}
+
+code {
+  @include text('highlight');
+  background: $background-color-highlight;
+  border-radius: $component-border-radius;
+}
+
+.selected { @include text('highlight'); }
+
+.text-smaller { font-size: 0.9em; }
+
+.text-subtle { @include text('subtle'); }
+.text-highlight { @include text('highlight'); }
+
+.text-error { @include text('error'); }
+.text-info {
+  @include text('info');
+  &:hover { color: $text-color-info; }
+}
+.text-warning {
+  @include text('warning');
+  &:hover { color: $text-color-warning; }
+}
+.text-success {
+  @include text('success');
+  &:hover { color: $text-color-success; }
+}
+
+@mixin highlight-mixin {
+  padding: 1px 4px;
+  font-weight: bold;
+  text-shadow: none;
+  border-radius: $component-border-radius;
+  color: $text-color-highlight;
+}
+
+.highlight {
+  @include highlight-mixin();
+  background-color: $background-color-highlight;
+}
+
+@mixin highlight-color($name, $color, $text-color) {
+  .highlight-#{$name} {
+    @include highlight-mixin();
+    background-color: fadeout($color, 50%);
+  }
+}
+@include highlight-color('info', $background-color-info, $text-color-info);
+@include highlight-color('warning', $background-color-warning, $text-color-warning);
+@include highlight-color('error', $background-color-error, $text-color-error);
+@include highlight-color('success', $background-color-success, $text-color-success);
+
+.results-view .path-details.list-item {
+  color: darken($text-color-highlight, 18%);
+}

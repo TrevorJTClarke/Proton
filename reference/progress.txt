@@ -2,13 +2,17 @@
  * TODO: Transfer Progress
  */
 
-// READY FOR PRODUCTION (checked all viewport sizes)
+// 4. READY FOR PRODUCTION (checked all viewport sizes)
 // -----------------------------------------------------
 
-// FINISHED (checked html)
+// 3. FINISHED (checked html)
 // -----------------------------------------------------
 
-// MIGRATE COMPLETE
+// 2. LOAD BOOTSTRAP AND SETUP COMPILES
+// -----------------------------------------------------
+- Setup namespace for all "atom" modules
+
+// 1. MIGRATE COMPLETE
 // -----------------------------------------------------
 _notifications
 _variables
@@ -35,24 +39,5 @@ _markdown
 _linux
 
 
-//NEEDS MIGRATING:
+// ... NEEDS MIGRATING:
 // -----------------------------------------------------
-//-these are one-dark-theme ui styles
-@import "styles/panes";
-@import "styles/progress";
-@import "styles/tabs";
-@import "styles/text";
-@import "styles/tooltips";
-@import "styles/tree-view";
-@import "styles/status-bar";
-@import "styles/key-binding";
-@import "styles/sites";
-
-@import "styles/settings";
-@import "styles/packages";
-@import "styles/core";
-@import "styles/config";
-
-@import "styles/git";
-@import "styles/nav";
-@import "styles/modal";

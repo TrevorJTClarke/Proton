@@ -25,6 +25,8 @@ atom-pane-container {
       margin-top: -4px;
       cursor: row-resize;
       border-bottom: none;
+      height: $ui-padding-pane;
+      margin-top: 0;
     }
   }
 
@@ -37,6 +39,8 @@ atom-pane-container {
       margin-left: -4px;
       cursor: col-resize;
       border-right: none;
+      width: $ui-padding-pane;
+      margin-left: -$ui-padding-pane;
     }
   }
 
@@ -46,6 +50,8 @@ atom-pane-container {
     -webkit-flex: 1;
     -webkit-flex-direction: column;
     overflow: visible;
+    padding-top: $ui-padding-pane;
+    padding-right: $ui-padding-pane;
 
     .item-views {
       -webkit-flex: 1;
@@ -53,6 +59,8 @@ atom-pane-container {
       min-height: 0;
       min-width: 0;
       position: relative;
+      border: 1px solid $pane-item-border-color;
+      border-top: none;
 
       .pane-item {
         color: $text-color;
