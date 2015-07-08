@@ -38,11 +38,6 @@ _linux
 //NEEDS MIGRATING:
 // -----------------------------------------------------
 //-these are one-dark-theme ui styles
-@import "styles/lists";
-@import "styles/messages";
-@import "styles/nav";
-@import "styles/modal";
-@import "styles/panels";
 @import "styles/panes";
 @import "styles/progress";
 @import "styles/tabs";
@@ -59,3 +54,5 @@ _linux
 @import "styles/config";
 
 @import "styles/git";
+@import "styles/nav";
+@import "styles/modal";

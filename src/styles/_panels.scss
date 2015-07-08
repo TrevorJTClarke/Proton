@@ -5,36 +5,59 @@
   box-shadow: none;
 
   &.bordered {
+    border: 1px solid $base-border-color;
     .panel-heading {
       border-radius: $component-border-radius $component-border-radius 0 0;
     }
   }
 }
 
+atom-panel {
+  @include text('normal');
+  position: relative;
+}
+
 // interstitial panels
 
 .inset-panel {
+  position: relative;
+  background-color: $inset-panel-background-color;
+  border-radius: $component-border-radius;
+  &.bordered {
+    border: 1px solid $base-border-color;
+    border-radius: $component-border-radius;
+  }
   .panel-heading {
     border-radius: $component-border-radius $component-border-radius 0 0;
+    border-color: $inset-panel-border-color;
   }
 }
 
 .panel-heading {
+  @include text('normal');
   margin: 0;
   padding: $component-padding;
-
   border-radius: 0;
-
   font-size: $font-size;
   line-height: 1;
+  border-bottom: 1px solid $panel-heading-border-color;
+  background-color: $panel-heading-background-color;
 
   .btn {
+    padding-left: 8px;
+    padding-right: 8px;
     $btn-height: $component-line-height - 5px;
     height: $btn-height;
     line-height: $btn-height;
     font-size: $font-size - 2px;
     position: relative;
     top: -5px;
+    @include btn-default(
+      lighten($button-background-color, 10%),
+      lighten($button-background-color-hover, 10%),
+      lighten($button-background-color-selected, 10%),
+      lighten($text-color, 10%)
+    );
   }
 }
 

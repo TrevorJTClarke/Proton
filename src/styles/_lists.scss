@@ -20,7 +20,40 @@
     line-height: $component-line-height;
     text-wrap: none;
     white-space: nowrap;
+    @include text('normal');
   }
+
+  @mixin generate-list-item-text-color($class) {
+    li:not(.list-nested-item).text-#{$class},
+    li.list-nested-item.text-#{$class} > .list-item {
+      @include text($class);
+    }
+  }
+  @include generate-list-item-text-color('subtle');
+  @include generate-list-item-text-color('info');
+  @include generate-list-item-text-color('success');
+  @include generate-list-item-text-color('warning');
+  @include generate-list-item-text-color('error');
+  @include generate-list-item-text-color('selected');
+
+  @mixin generate-list-item-status-color($color, $status) {
+    li:not(.list-nested-item).status-#{$status},
+    li.list-nested-item.status-#{$status} > .list-item {
+      color: $color;
+    }
+
+    li:not(.list-nested-item).selected.status-#{$status},
+    li.list-nested-item.selected.status-#{$status} > .list-item {
+      color: $color;
+    }
+
+  }
+
+  @include generate-list-item-status-color($text-color-added, 'added');
+  @include generate-list-item-status-color($text-color-ignored, 'ignored');
+  @include generate-list-item-status-color($text-color-modified, 'modified');
+  @include generate-list-item-status-color($text-color-removed, 'removed');
+  @include generate-list-item-status-color($text-color-renamed, 'renamed');
 
   // The background highlight uses ::before rather than the item background so
   // it can span the entire width of the parent container rather than the size
@@ -39,13 +72,21 @@
     position: relative;
   }
 
+  li:not(.list-nested-item).selected,
+  li.list-nested-item.selected > .list-item {
+    @include text('selected');
+  }
+
   .icon::before {
     margin-right: $component-icon-padding;
     position: relative;
     top: 1px;
   }
+  // .no-icon {
+  //   padding-left: $component-icon-padding + $component-icon-size;
+  // }
   .no-icon {
-    padding-left: $component-icon-padding + $component-icon-size;
+    padding-left: calc($ui-padding-icon "+" $component-icon-size);
   }
 }
 

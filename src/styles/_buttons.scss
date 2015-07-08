@@ -60,6 +60,7 @@ $btn-padding: 0 $ui-size/1.25;
 
 .btn {
   color: $text-color;
+  @include text('highlight');
   border-radius: $component-border-radius;
   border: none;
   text-shadow: none;

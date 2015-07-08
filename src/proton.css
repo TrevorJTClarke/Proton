@@ -1073,6 +1073,8 @@ atom-notifications {
 
 .btn {
   color: #333;
+  font-weight: normal;
+  color: #333;
   border-radius: 2px;
   border: none;
   text-shadow: none;
@@ -1415,7 +1417,95 @@ a {
   .list-tree li.list-nested-item > .list-item {
     line-height: 25px;
     text-wrap: none;
-    white-space: nowrap; }
+    white-space: nowrap;
+    font-weight: normal;
+    color: #333; }
+  .list-group li:not(.list-nested-item).text-subtle,
+  .list-group li.list-nested-item.text-subtle > .list-item,
+  .list-tree li:not(.list-nested-item).text-subtle,
+  .list-tree li.list-nested-item.text-subtle > .list-item {
+    font-weight: normal;
+    color: #333; }
+  .list-group li:not(.list-nested-item).text-info,
+  .list-group li.list-nested-item.text-info > .list-item,
+  .list-tree li:not(.list-nested-item).text-info,
+  .list-tree li.list-nested-item.text-info > .list-item {
+    font-weight: normal;
+    color: #333; }
+  .list-group li:not(.list-nested-item).text-success,
+  .list-group li.list-nested-item.text-success > .list-item,
+  .list-tree li:not(.list-nested-item).text-success,
+  .list-tree li.list-nested-item.text-success > .list-item {
+    font-weight: normal;
+    color: #333; }
+  .list-group li:not(.list-nested-item).text-warning,
+  .list-group li.list-nested-item.text-warning > .list-item,
+  .list-tree li:not(.list-nested-item).text-warning,
+  .list-tree li.list-nested-item.text-warning > .list-item {
+    font-weight: normal;
+    color: #333; }
+  .list-group li:not(.list-nested-item).text-error,
+  .list-group li.list-nested-item.text-error > .list-item,
+  .list-tree li:not(.list-nested-item).text-error,
+  .list-tree li.list-nested-item.text-error > .list-item {
+    font-weight: normal;
+    color: #333; }
+  .list-group li:not(.list-nested-item).text-selected,
+  .list-group li.list-nested-item.text-selected > .list-item,
+  .list-tree li:not(.list-nested-item).text-selected,
+  .list-tree li.list-nested-item.text-selected > .list-item {
+    font-weight: normal;
+    color: #333; }
+  .list-group li:not(.list-nested-item).status-added,
+  .list-group li.list-nested-item.status-added > .list-item,
+  .list-tree li:not(.list-nested-item).status-added,
+  .list-tree li.list-nested-item.status-added > .list-item {
+    color: #1fe977; }
+  .list-group li:not(.list-nested-item).selected.status-added,
+  .list-group li.list-nested-item.selected.status-added > .list-item,
+  .list-tree li:not(.list-nested-item).selected.status-added,
+  .list-tree li.list-nested-item.selected.status-added > .list-item {
+    color: #1fe977; }
+  .list-group li:not(.list-nested-item).status-ignored,
+  .list-group li.list-nested-item.status-ignored > .list-item,
+  .list-tree li:not(.list-nested-item).status-ignored,
+  .list-tree li.list-nested-item.status-ignored > .list-item {
+    color: #777; }
+  .list-group li:not(.list-nested-item).selected.status-ignored,
+  .list-group li.list-nested-item.selected.status-ignored > .list-item,
+  .list-tree li:not(.list-nested-item).selected.status-ignored,
+  .list-tree li.list-nested-item.selected.status-ignored > .list-item {
+    color: #777; }
+  .list-group li:not(.list-nested-item).status-modified,
+  .list-group li.list-nested-item.status-modified > .list-item,
+  .list-tree li:not(.list-nested-item).status-modified,
+  .list-tree li.list-nested-item.status-modified > .list-item {
+    color: #f78a46; }
+  .list-group li:not(.list-nested-item).selected.status-modified,
+  .list-group li.list-nested-item.selected.status-modified > .list-item,
+  .list-tree li:not(.list-nested-item).selected.status-modified,
+  .list-tree li.list-nested-item.selected.status-modified > .list-item {
+    color: #f78a46; }
+  .list-group li:not(.list-nested-item).status-removed,
+  .list-group li.list-nested-item.status-removed > .list-item,
+  .list-tree li:not(.list-nested-item).status-removed,
+  .list-tree li.list-nested-item.status-removed > .list-item {
+    color: #c00; }
+  .list-group li:not(.list-nested-item).selected.status-removed,
+  .list-group li.list-nested-item.selected.status-removed > .list-item,
+  .list-tree li:not(.list-nested-item).selected.status-removed,
+  .list-tree li.list-nested-item.selected.status-removed > .list-item {
+    color: #c00; }
+  .list-group li:not(.list-nested-item).status-renamed,
+  .list-group li.list-nested-item.status-renamed > .list-item,
+  .list-tree li:not(.list-nested-item).status-renamed,
+  .list-tree li.list-nested-item.status-renamed > .list-item {
+    color: #5293d8; }
+  .list-group li:not(.list-nested-item).selected.status-renamed,
+  .list-group li.list-nested-item.selected.status-renamed > .list-item,
+  .list-tree li:not(.list-nested-item).selected.status-renamed,
+  .list-tree li.list-nested-item.selected.status-renamed > .list-item {
+    color: #5293d8; }
   .list-group .selected::before,
   .list-tree .selected::before {
     content: '';
@@ -1427,6 +1517,12 @@ a {
   .list-group .selected > *,
   .list-tree .selected > * {
     position: relative; }
+  .list-group li:not(.list-nested-item).selected,
+  .list-group li.list-nested-item.selected > .list-item,
+  .list-tree li:not(.list-nested-item).selected,
+  .list-tree li.list-nested-item.selected > .list-item {
+    font-weight: normal;
+    color: #333; }
   .list-group .icon::before,
   .list-tree .icon::before {
     margin-right: 5px;
@@ -1434,7 +1530,7 @@ a {
     top: 1px; }
   .list-group .no-icon,
   .list-tree .no-icon {
-    padding-left: 21px; }
+    padding-left: calc($ui-padding-icon "+" $component-icon-size); }
 
 .list-tree .list-nested-item > .list-tree > li,
 .list-tree .list-nested-item > .list-group > li {
@@ -1523,6 +1619,8 @@ a {
 
 ul.background-message {
   font-size: 39px;
+  font-weight: bold;
+  color: #333333;
   margin: 0;
   padding: 0; }
   ul.background-message li {
@@ -1546,24 +1644,64 @@ ul.background-message {
   border: none;
   background-color: transparent;
   box-shadow: none; }
-  .panel.bordered .panel-heading {
-    border-radius: 2px 2px 0 0; }
+  .panel.bordered {
+    border: 1px solid #eee; }
+    .panel.bordered .panel-heading {
+      border-radius: 2px 2px 0 0; }
 
-.inset-panel .panel-heading {
-  border-radius: 2px 2px 0 0; }
+atom-panel {
+  font-weight: normal;
+  color: #333;
+  position: relative; }
+
+.inset-panel {
+  position: relative;
+  background-color: #eee;
+  border-radius: 2px; }
+  .inset-panel.bordered {
+    border: 1px solid #eee;
+    border-radius: 2px; }
+  .inset-panel .panel-heading {
+    border-radius: 2px 2px 0 0;
+    border-color: #eee; }
 
 .panel-heading {
+  font-weight: normal;
+  color: #333;
   margin: 0;
   padding: 10px;
   border-radius: 0;
   font-size: 13px;
-  line-height: 1; }
+  line-height: 1;
+  border-bottom: 1px solid transparent;
+  background-color: #ddd; }
   .panel-heading .btn {
+    padding-left: 8px;
+    padding-right: 8px;
     height: 20px;
     line-height: 20px;
     font-size: 11px;
     position: relative;
-    top: -5px; }
+    top: -5px;
+    color: #4d4d4d;
+    text-shadow: none;
+    border: 1px solid #aaa;
+    background-color: #e6e6e6;
+    background-image: linear-gradient(#ebebeb, #e6e6e6); }
+    .panel-heading .btn:focus {
+      outline: none; }
+    .panel-heading .btn:focus,
+    .panel-heading .btn:hover {
+      color: #111;
+      background-image: linear-gradient(#f7f7f7, #f2f2f2); }
+    .panel-heading .btn:active {
+      background: #dbdbdb;
+      box-shadow: none; }
+    .panel-heading .btn.selected {
+      background: #f2f2f2; }
+    .panel-heading .btn.selected:focus,
+    .panel-heading .btn.selected:hover {
+      background: #f7f7f7; }
 
 atom-panel-container.left,
 atom-panel-container.right {
