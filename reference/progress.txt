@@ -1,0 +1,43 @@
+/**
+ * TODO: Transfer Progress
+ */
+
+// 4. READY FOR PRODUCTION (checked all viewport sizes)
+// -----------------------------------------------------
+
+// 3. FINISHED (checked html)
+// -----------------------------------------------------
+
+// 2. LOAD BOOTSTRAP AND SETUP COMPILES
+// -----------------------------------------------------
+- Setup namespace for all "atom" modules
+
+// 1. MIGRATE COMPLETE
+// -----------------------------------------------------
+_notifications
+_variables
+_ghicons
+_ghcodes
+_badges
+_buttons
+_icons
+_lists
+_links
+_messages
+_panels
+_panes
+_popover-list
+_sections
+_select-list
+_syntax
+_text-editor-light
+_workspace-view
+_text
+_utilities
+_bootstrap-overrides
+_markdown
+_linux
+
+
+// ... NEEDS MIGRATING:
+// -----------------------------------------------------

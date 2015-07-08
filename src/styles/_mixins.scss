@@ -1,0 +1,57 @@
+// Font Mixins
+// --------------------------------------------------
+@mixin font-family-serif() {
+  font-family: $serif-font-family;
+}
+@mixin font-family-sans-serif() {
+  font-family: helvetica, Arial, sans-serif;
+}
+@mixin font-family-monospace() {
+  font-family: $mono-font-family;
+}
+@mixin font-shorthand($size: $base-font-size, $weight: normal, $line-height: $base-line-height) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+}
+@mixin font-serif($size: $base-font-size, $weight: normal, $line-height: $base-line-height) {
+  @include font-family-serif();
+  @include font-shorthand($size, $weight, $line-height);
+}
+@mixin font-sans-serif($size: $base-font-size, $weight: normal, $line-height: $base-line-height) {
+  @include font-family-sans-serif();
+  @include font-shorthand($size, $weight, $line-height);
+}
+
+@mixin focus() {
+  outline: none;
+  border-color: $base-accent-color;
+  box-shadow: 0 0 0 1px $base-accent-color;
+}
+
+@mixin text($val){
+  @if $val = 'normal' {
+    font-weight: normal;
+    color: $text-color;
+  }
+  @else if $val = 'subtle' {
+    font-weight: normal;
+    color: $text-color-subtle;
+  }
+  @else if $val = 'highlight' or $val = 'selected' {
+    font-weight: normal;
+    color: $text-color-highlight;
+  }
+  @else if $val = 'info' {
+    color: $text-color-info;
+  }
+  @else if $val = 'success' {
+    color: $text-color-success;
+  }
+  @else if $val = 'warning' {
+    color: $text-color-warning;
+  }
+  @else if $val = 'error' {
+    color: $text-color-error;
+  }
+}
